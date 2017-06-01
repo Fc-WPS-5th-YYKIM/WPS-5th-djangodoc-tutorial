@@ -25,6 +25,19 @@ class ResultsView(generic.DeleteView):
     template_name = 'polls/results.html'
 
 
+# def index(request):
+#     latest_question_list =
+#     context = {'latest_question_list': latest_question_list}
+#     return render(request, , context)
+
+# def detail(request, pk):
+#     question = get_object_or_404(Question, pk=pk)
+#     return render(request, 'polls/detail.html', {'question': question})
+
+# def result(request, pk):
+#     question = get_object_or_404(Question, pk=pk)
+#     return render(request, 'polls/results.html', {'question': question})
+
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
